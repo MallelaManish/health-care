@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+</head>
+<body>
+    <diV class="container">
+        <div id="login">
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" #loginfrom="ngForm">
+                                <h3 class="text-center text-info;font-family:sanf">SignUp</h3>
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username" class="form-control" placeholder="Enter you're name">
+                                    
+                                </div>
+                           
+                                
+                                <div class="form-group">
+                                 
+                                    
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter name" [(ngModel)]="name" #name1="ngModel" 
+                                    required name="name1"  [class.is-invalid]="name1.invalid && name1.touched" >
+                                     <small [class.d-none]="name1.valid || name1.untouched">
+                                     <span style="color: red;">*</span>name is required</small>
+                                </div>
+                                <div class="form-group">
+                                   
+                                    <input type="text"  #emp1="ngModel" placeholder="Enter Email "class="form-control" [(ngModel)]="empid" required
+                                    [class.is-invalid]="emp1.invalid && emp1.touched" name="empi">
+                                    <small [class.d-none]="emp1.valid || emp1.untouched"><span style="color: red;">*</span>Email  is required</small>
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" [(ngModel)]="pass" #passw="ngModel" required name="passw"  [class.is-invalid]="passw.invalid && passw.touched" >
+                                     <small [class.d-none]="passw.valid || passw.untouched"><span style="color: red;">*</span>Password is required</small>
+                                </div>
+                              
+                                <div class="form-group">
+                                    
+                                    <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter phone number" [(ngModel)]="phoneno" #phone1="ngModel" 
+                                    required name="phone1"  [class.is-invalid]="phone1.invalid && phone1.touched" >
+                                     <small [class.d-none]="phone1.valid || phone1.untouched">
+                                    <span style="color: red;">*</span>phone number is required</small>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="number" name="age" id="age" class="form-control" placeholder="Enter your age(in year)" [(ngModel)]="age">
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Male</label><br>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label><br>
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">Other</label>
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                    <button type="button" class="btn btn-primary btn-block" >SignUp</button>
+                                </div>        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+    
+    </diV>
+    
+    
+</body>
+</html>
